@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import todoReducer from './movie/reducers';
+import movieReducer from './movie/reducers';
 
 export default combineReducers({
-  todoReducer,
+  movieReducer,
 });
