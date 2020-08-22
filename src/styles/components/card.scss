@@ -3,6 +3,11 @@
   flex-direction: row;
   padding: 30px;
 
+  &-img-wrapper {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
   &-title {
     display: flex;
     justify-content: center;
@@ -25,7 +30,6 @@
   .list-group {
     width: 100%;
     display: flex;
-    margin-left: 21px;
     justify-content: center;
     text-align: center;
   }
@@ -38,7 +42,6 @@
 
     &-title {
       font-size: 16px;
-      margin-top: 25px;
     }
   
     .list-group {

@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 const Card = ({ data }) => {
-  const {
-    Poster, Title, Runtime, Type, Director, Actors, imdbRating,
-  } = data;
+  const { Poster, Title, Runtime, Type, Director, Actors, imdbRating } = data;
 
   const [imageSrc, setImageSrc] = useState(Poster);
 
@@ -13,21 +11,25 @@ const Card = ({ data }) => {
   };
 
   return (
-    <div className="card">
-      <img
-        className="card-img-top"
-        src={imageSrc}
-        onError={handleImageError}
-        alt="movie-img"
-      />
-      <ul className="list-group list-group-flush">
-        <h2 className="card-title">{Title}</h2>
-        <li className="list-group-item">Time: {Runtime}</li>
-        <li className="list-group-item">Type: {Type}</li>
-        <li className="list-group-item">Director: {Director}</li>
-        <li className="list-group-item">Actors: {Actors}</li>
-        <li className="list-group-item">imdbRating: {imdbRating}</li>
-      </ul>
+    <div className="card row">
+      <div className="card-img-wrapper col d-flex justify-content-center">
+        <img
+          className="card-img-top"
+          src={imageSrc}
+          onError={handleImageError}
+          alt="movie-img"
+        />
+      </div>
+      <div className="col">
+        <ul className="list-group list-group-flush">
+          <h2 className="card-title">{Title}</h2>
+          <li className="list-group-item">Time: {Runtime}</li>
+          <li className="list-group-item">Type: {Type}</li>
+          <li className="list-group-item">Director: {Director}</li>
+          <li className="list-group-item">Actors: {Actors}</li>
+          <li className="list-group-item">imdbRating: {imdbRating}</li>
+        </ul>
+      </div>
     </div>
   );
 };
