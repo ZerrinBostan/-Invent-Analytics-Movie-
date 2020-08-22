@@ -1,0 +1,25 @@
+.search-content {
+  background: $aliceblue;
+  padding: 25px;
+  border: 1px solid $royal-blue;
+  border-radius: 5px;
+
+  &__title {
+    color: $royal-blue;
+    padding-bottom: 25px;
+  }
+
+  &__form {
+    padding-bottom: 25px;
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $aquamarine;
+    border: 1px solid $white;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+}
